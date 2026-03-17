@@ -10,8 +10,10 @@ void OLED_ShowPWM(int PWM)
 		PWM=-PWM;	
 	}
 	else 
+	{
 		OLED_ShowStr(0,6," ",2); 		//掩盖负号
-		OLED_Shownum1(9,6,PWM,2);	    //显示速度
+	}
+	OLED_Shownum1(9,6,PWM,2);	    //显示速度
 	
 }
 
@@ -23,7 +25,9 @@ void OLED_ShowCount(int Count)
 		Count=-Count;	
 	}
 	else 
+	{
 		OLED_ShowStr(10,6," ",2); 		//掩盖负号
+	}
 	OLED_Shownum1(20,6,Count,2);	    //显示速度
 	
 }
